@@ -12,9 +12,9 @@ __exec() {
     $cmd $@
 }
 
-rm -r artifacts/
-rm -r Example/obj/
-rm -r Source/GreetingTasks/obj/
+rm -rf artifacts/
+rm -rf Example/obj/
+rm -rf Source/GreetingTasks/obj/
 
 __exec dotnet restore ./Source/GreetingTasks/
 __exec dotnet pack -c Release ./Source/GreetingTasks/
